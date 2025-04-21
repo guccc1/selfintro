@@ -16,5 +16,11 @@
     "choices": ["パルクール", "ブレイキン", "ダブルダッチ"],
     "answer": 2,
     "explanation": "ダブルダッチを毎週日曜日やってるよ！京都大学にもダブルダッチサークルがあるのだ．<br><img src='https://media.giphy.com/media/l0HlTJjkR1xL7m7pu/giphy.gif' width='300'>"
+  },
+  {
+    "question": "大学時代，何研究してた？？",
+    "choices": ["ロボット", "ネットワーク", "建築"],
+    "answer": 0,
+    "explanation": "正解は，ロボット！特にHuman Robot Interaction(HRI)という分野で，ヒトとロボットをひたすら対話させてたよ<br><img src='https://media.giphy.com/media/l0HlTJjkR1xL7m7pu/giphy.gif' width='300'>"
   }
 ]
