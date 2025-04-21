@@ -37,14 +37,6 @@ function checkAnswer(selected) {
   const q = quiz[current];
   choicesEl.innerHTML = "";
 
-  if (selected === q.answer) {
-    messageEl.textContent = "まりさ「正解だぜぇ！」";
-    correctSound.play();
-    score++;
-  } else {
-    messageEl.textContent = "まりさ「どわぁ〜っ！？」";
-    wrongSound.play();
-  }
 
   explanationEl.innerHTML = q.explanation; // HTML形式の解説対応
   explanationEl.classList.add("active");
