@@ -20,6 +20,11 @@ body {
   margin-top: 20px;
 }
 
+.message {
+  margin-top: 40px; /* もともと20pxなら倍にして少し下へ */
+  font-size: 20px;  /* 大きさも変えたければここで調整 */
+}
+
 button {
   display: block;
   margin: 10px auto;
