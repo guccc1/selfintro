@@ -38,7 +38,7 @@ function checkAnswer(selected) {
   choicesEl.innerHTML = "";
 
   if (selected === q.answer) {
-    messageEl.textContent = "まりさ「何いってんだ！」";
+    messageEl.textContent = "まりさ「違うだろ！」";
     correctSound.play();
     score++;
   } else {
