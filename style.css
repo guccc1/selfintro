@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 画面の高さ全部使う */
+  height: 100vh;
   margin: 0;
   background-color: black;
   color: white;
@@ -12,47 +12,49 @@ body {
 
 .container {
   width: 100%;
-  max-width: 600px;
-  padding: 20px;
+  max-width: 800px;
+  padding: 40px;
 }
 
 .question, .choices, .message, .explanation {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 28px;
 }
 
 .message {
-  margin-top: 40px; /* もともと20pxなら倍にして少し下へ */
-  font-size: 20px;  /* 大きさも変えたければここで調整 */
+  margin-top: 50px;
+  font-size: 24px;
 }
 
 button {
   display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin: 15px auto;
+  padding: 20px 40px;
+  font-size: 24px;
   background-color: darkred;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 #score {
-  font-size: 24px;
-  margin-top: 40px;
+  font-size: 28px;
+  margin-top: 50px;
 }
 
 .balloon {
   position: relative;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 25px 30px;
   background: #fff;
   color: #000;
   border: 2px solid #444;
-  border-radius: 15px;
-  max-width: 400px;
-  margin: 20px auto;
-  display: none; /* 初期状態では非表示 */
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  display: none;
+  font-size: 22px;
 }
 
 .balloon.active {
@@ -67,4 +69,25 @@ button {
   transform: translateX(-50%);
   border: 10px solid transparent;
   border-top: 20px solid #fff;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .question, .choices, .message, .explanation {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+
+  .balloon {
+    font-size: 18px;
+    padding: 20px;
+  }
 }
