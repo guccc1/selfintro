@@ -3,7 +3,7 @@
     "question": "苗字は「山口」，下の名前は？",
     "choices": ["リミ", "ルミ", "レミ"],
     "answer": 1,
-    "explanation": "正解は「ルミ」．br><img src='1.gif' alt='おかお' width='600'>"
+    "explanation": "正解は「ルミ」．<img src='1.gif' alt='おかお' width='600'>"
   },
   {
     "question": "山口の実家はどこ？",
