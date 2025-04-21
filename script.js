@@ -38,11 +38,11 @@ function checkAnswer(selected) {
   choicesEl.innerHTML = "";
 
   if (selected === q.answer) {
-    messageEl.textContent = "まりさ「正解だぜ！」";
+    messageEl.textContent = "正解だぜ！";
     correctSound.play();
     score++;
   } else {
-    messageEl.textContent = "まりさ「違うだろ！」";
+    messageEl.textContent = "違うだろ！";
     wrongSound.play();
   }
 
