@@ -1,9 +1,19 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面の高さ全部使う */
+  margin: 0;
   background-color: black;
   color: white;
   font-family: "ＭＳ ゴシック", monospace;
   text-align: center;
-  padding: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
 
 .question, .choices, .message, .explanation {
