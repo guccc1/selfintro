@@ -1,4 +1,4 @@
-let quiz = [];
+et quiz = [];
 let current = 0;
 let score = 0;
 
@@ -21,7 +21,8 @@ function showQuestion() {
   const q = quiz[current];
   questionEl.textContent = `Q${current + 1}. ${q.question}`;
   messageEl.textContent = "";
-  explanationEl.textContent = "";
+  explanationEl.innerHTML = "";
+  explanationEl.classList.remove("active");
   choicesEl.innerHTML = "";
 
   q.choices.forEach((choice, index) => {
@@ -37,20 +38,22 @@ function checkAnswer(selected) {
   choicesEl.innerHTML = "";
 
   if (selected === q.answer) {
-    messageEl.textContent = "まりさ「おおっ！正解だぜぇ！」";
+    messageEl.textContent = "まりさ「正解だぜぇ！」";
     correctSound.play();
     score++;
   } else {
-    messageEl.textContent = "まりさ「どわぁ〜っ！？そっちかよ！」";
+    messageEl.textContent = "まりさ「どわぁ〜っ！？」";
     wrongSound.play();
   }
 
-  explanationEl.textContent = q.explanation;
+  explanationEl.innerHTML = q.explanation; // HTML形式の解説対応
+  explanationEl.classList.add("active");
 
   const nextBtn = document.createElement("button");
   nextBtn.textContent = "次へすすむ";
   nextBtn.onclick = () => {
     current++;
+    explanationEl.classList.remove("active");
     if (current < quiz.length) {
       showQuestion();
     } else {
@@ -64,6 +67,7 @@ function showScore() {
   questionEl.textContent = "";
   choicesEl.innerHTML = "";
   messageEl.textContent = "";
-  explanationEl.textContent = "";
+  explanationEl.innerHTML = "";
+  explanationEl.classList.remove("active");
   scoreEl.textContent = `スコア: ${score} / ${quiz.length} だぜ！`;
 }
