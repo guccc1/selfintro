@@ -27,7 +27,6 @@ button {
   margin-top: 40px;
 }
 
-/* アニメ風ふきだし */
 .balloon {
   position: relative;
   display: inline-block;
@@ -38,6 +37,11 @@ button {
   border-radius: 15px;
   max-width: 400px;
   margin: 20px auto;
+  display: none; /* 初期状態では非表示 */
+}
+
+.balloon.active {
+  display: block;
 }
 
 .balloon::before {
