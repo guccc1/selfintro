@@ -21,6 +21,6 @@
   "question": "大学時代，何研究してた？？",
   "choices": ["ロボット", "ネットワーク", "建築"],
   "answer": 0,
-  "explanation": "正解は，ロボット！特にHuman Robot Interaction(HRI)という分野で，ヒトとロボットをひたすら対話させてたよ<br><iframe width='560' height='315' src='https://www.youtube.com/embed/9lw5oTPrrB8?si=C-hkw7BuMEi-DsuN' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+  "explanation": "正解は，ロボット！特にHuman Robot Interaction(HRI)という分野で，ヒトとロボットをひたすら対話させてたよ<br><iframe width='560' height='315' src='https://www.youtube.com/embed/9lw5oTPrrB8?start=971' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
 }
 ]
