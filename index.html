@@ -2,12 +2,107 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3宅クイズゲーム</title>
-  <script src="https://cdn.jsdelivr.net/gh/kitao/pyxel/wasm/pyxel.js"></script>
+  <title>まりさの！自己紹介クイズ！</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: "ＭＳ ゴシック", monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    .question, .choices, .message {
+      margin-top: 20px;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: darkred;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #score {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>3宅クイズゲーム</h1>
-  <pyxel-run src="main.py" gamepad="enabled"></pyxel-run>
+  <h1>まりさの！自己紹介クイズ！</h1>
+  <div class="question" id="question"></div>
+  <div class="choices" id="choices"></div>
+  <div class="message" id="message"></div>
+  <div id="score"></div>
+
+  <script>
+    const quiz = [
+      {
+        question: "まりさの好きな魔法は？",
+        choices: ["マスタースパーク", "冷気魔法", "癒しの光"],
+        answer: 0
+      },
+      {
+        question: "まりさの帽子の色は？",
+        choices: ["赤", "白", "緑"],
+        answer: 1
+      },
+      {
+        question: "まりさの口癖は？",
+        choices: ["だぜ！", "なのです", "ですわ"],
+        answer: 0
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+
+    function showQuestion() {
+      const q = quiz[current];
+      document.getElementById("question").textContent = `Q${current + 1}. ${q.question}`;
+      const choicesDiv = document.getElementById("choices");
+      choicesDiv.innerHTML = "";
+      document.getElementById("message").textContent = "";
+
+      q.choices.forEach((choice, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = choice;
+        btn.onclick = () => checkAnswer(index);
+        choicesDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const correct = quiz[current].answer;
+      const message = document.getElementById("message");
+
+      if (selected === correct) {
+        message.textContent = "まりさ「おおっ！正解だぜぇ！」";
+        score++;
+      } else {
+        message.textContent = "まりさ「どわぁ〜っ！？そっちかよ！」";
+      }
+
+      current++;
+      if (current < quiz.length) {
+        setTimeout(showQuestion, 1500);
+      } else {
+        setTimeout(showScore, 1500);
+      }
+    }
+
+    function showScore() {
+      document.getElementById("question").textContent = "";
+      document.getElementById("choices").innerHTML = "";
+      document.getElementById("message").textContent = "";
+      document.getElementById("score").textContent = `スコア: ${score} / ${quiz.length} だぜ！`;
+    }
+
+    // スタート
+    showQuestion();
+  </script>
 </body>
 </html>
