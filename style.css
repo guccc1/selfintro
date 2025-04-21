@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "ＭＳ ゴシック", monospace;
+  text-align: center;
+  padding: 40px;
+}
+
+.question, .choices, .message, .explanation {
+  margin-top: 20px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#score {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+/* アニメ風ふきだし */
+.balloon {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  background: #fff;
+  color: #000;
+  border: 2px solid #444;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top: 20px solid #fff;
+}
