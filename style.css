@@ -6,7 +6,7 @@ body {
   margin: 0;
   background-color: black;
   color: white;
-  font-family: "ＭＳ ゴシック", monospace;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   text-align: center;
 }
 
